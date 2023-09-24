@@ -1,4 +1,26 @@
 
+.product-container {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.product-item {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+
+button {
+  padding: 10px 15px;
+  cursor: pointer;  
+}
+
 input {
   padding: 10px 15px;
 }

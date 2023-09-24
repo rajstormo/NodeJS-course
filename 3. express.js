@@ -7,6 +7,7 @@ const shopRoutes = require("./routes/shop");
 
 // app.set() -> allows to set values globally on express application
 app.set('view engine', 'pug');
+app.set('views','views');
 
 // parses form data and makes it available in the req.body 
 app.use(express.urlencoded({extended:false}));
@@ -23,7 +24,7 @@ app.use(shopRoutes);
 
 // if a route entered by user doesn't exist, show 404 error page
 app.use((req,res) => {
-  res.status(404).sendFile(path.join(__dirname,'views','404.html'));
+  res.status(404).render('404',{title:"Error"});
 })
 
 

@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title #{title}
+    link(rel="stylesheet", href="/css/main.css")
+    link(rel="stylesheet", href="/css/product.css")
+  body 
+    header 
+      nav 
+        ul.menu-bar
+          li
+            a(href="/") Shop  
+          li 
+            a(href="/admin/add-product") Add Product 
+
+    main 
+      if prods.length > 0
+        ul.product-container 
+          each product in prods
+            li.product-item
+              h2 #{product.title}
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, minus.
+              button Add to cart 
+      else 
+        h2 No Products to Show
