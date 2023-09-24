@@ -24,7 +24,7 @@ app.use(shopRoutes);
 
 // if a route entered by user doesn't exist, show 404 error page
 app.use((req,res) => {
-  res.status(404).render('404',{title:"Error"});
+  res.status(404).render('404',{pageTitle:"Error"});
 })
 
 
