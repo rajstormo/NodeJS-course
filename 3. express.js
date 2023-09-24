@@ -6,6 +6,7 @@ const {router: adminRoutes} = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
 
 // app.set() -> allows to set values globally on express application
+// setting the default view engine as ejs and telling express to search the templates in the 'views' folder
 app.set('view engine', 'ejs');
 app.set('views','views');
 
