@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const path = require("path");
 
-const {router: adminRoutes} = require("./routes/admin");
+const adminRoutes = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
 
 // app.set() -> allows to set values globally on express application
