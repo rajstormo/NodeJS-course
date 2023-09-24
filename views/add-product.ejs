@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shopping Page</title>
+  <title><%= pageTitle %></title>
   <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/product.css">
 </head>
 <body>
   <header>
@@ -17,10 +18,10 @@
   </header>
 
   <main>
-    <h2>My Product</h2>
-    <ul>
-      List all products...
-    </ul>
+    <form action="/admin/products" method="POST">
+      <input type="text" name="title" placeholder="Enter product name.." />
+      <input type="submit" value="Submit">
+    </form>
   </main>
 </body>
 </html>

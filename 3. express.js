@@ -6,7 +6,7 @@ const {router: adminRoutes} = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
 
 // app.set() -> allows to set values globally on express application
-app.set('view engine', 'pug');
+app.set('view engine', 'ejs');
 app.set('views','views');
 
 // parses form data and makes it available in the req.body 
