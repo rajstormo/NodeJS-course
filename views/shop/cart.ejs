@@ -1,0 +1,44 @@
+<%- include('../includes/head.ejs') %>
+
+    <link rel="stylesheet" href="/css/cart.css">
+  </head>
+
+<%- include('../includes/navigation.ejs') %>
+
+    <main>
+      <h1> Shopping Cart </h1>
+      <% if (cartItems.length > 0) { %>
+      <ul class="cart-container">
+        <% for (let item of cartItems) { %>
+          <li class="cart-item"> 
+            <img src="<%= item.imageUrl %>" alt="">
+            <h2><%= item.title %></h2>
+            <div class="cart-edit">
+              <button class="btn">-</button>
+              <p><%= item.qty %></p>
+              <button class="btn">+</button>
+            </div>
+            <div class="price-info">
+              <p>$ <%= item.price %></p>
+              <form action="/cart/<%= item.id%>" method="post">
+                <input type="submit" value="Remove" class="btn">
+              </form>
+            </div>
+          </li>
+        <% } %>
+        <li class="price-section">
+          <div style="display: flex; gap:2rem;">
+            <div class="items-count">
+              <h3>Sub-Total</h3>
+              <p><%= cartItems.length %> items</p>
+            </div>
+            <h3>$ <%= totalPrice %> </h3>
+          </div>
+        </li>
+      </ul>
+      <% } else { %>
+        <h1>Nothing Added...</h1>
+      <% } %>
+    </main>
+
+<%- include('../includes/end.ejs') %>
